@@ -21,26 +21,15 @@ const produtos = [
   // ── BANNERS ─────────────────────────────────────────────────────────────
   {
     id: 1,
-    nome: 'Banner Pequeno',
+    nome: 'Banner Personalizado',
     categoria: 'banners',
     emoji: '🖼️',
-    descricao: 'Ideal para eventos, promoções e divulgação interna. Impressão de alta resolução em lona 440g com acabamento reforçado.',
+    descricao: 'Lona de alta qualidade com acabamento em bastão e corda. Impressão colorida de alta resolução. Ideal para eventos, fachadas e pontos de venda. 1 unidade.',
     destaque: 'Mais vendido',
     tamanhos: [
-      { label: '43×61 cm',  preco: 25 },
-    ],
-  },
-  {
-    id: 2,
-    nome: 'Banner Grande',
-    categoria: 'banners',
-    emoji: '🖼️',
-    descricao: 'Perfeito para fachadas, eventos e pontos de venda. Alta visibilidade com cores vivas e resistência ao tempo.',
-    destaque: null,
-    tamanhos: [
-      { label: '60×90 cm',  preco: 40 },
-      { label: '90×120 cm', preco: 65 },
-      { label: '1×2 m',     preco: 90 },
+      { label: '0,60×0,80 m — 1 unid.', preco: 40 },
+      { label: '0,80×1,00 m — 1 unid.', preco: 60 },
+      { label: '0,80×1,20 m — 1 unid.', preco: 70 },
     ],
   },
 
@@ -125,15 +114,41 @@ const produtos = [
   // ── ADESIVOS ─────────────────────────────────────────────────────────────
   {
     id: 9,
-    nome: 'Adesivo Vinil',
+    nome: 'Adesivo Personalizado — 5×5 cm',
     categoria: 'adesivos',
     emoji: '🏷️',
-    descricao: 'Adesivo vinil com impressão colorida, resistente à água e ao sol. Acabamento brilhoso ou laminado fosco.',
+    descricao: 'Formato quadrado ou redondo, vinil adesivo de alta qualidade, resistente à água e ao sol. Impressão colorida com acabamento brilhoso.',
     destaque: null,
     tamanhos: [
-      { label: 'Pequeno (até 10 cm)',  preco: 10 },
-      { label: 'Médio (11–25 cm)',     preco: 25 },
-      { label: 'Grande (26–50 cm)',    preco: 45 },
+      { label: '5×5 cm — 40 unid.',  preco: 15   },
+      { label: '5×5 cm — 60 unid.',  preco: 20.50 },
+      { label: '5×5 cm — 100 unid.', preco: 35   },
+    ],
+  },
+  {
+    id: 13,
+    nome: 'Adesivo Personalizado — 8×8 cm',
+    categoria: 'adesivos',
+    emoji: '🏷️',
+    descricao: 'Formato quadrado ou redondo, vinil adesivo de alta qualidade, resistente à água e ao sol. Impressão colorida com acabamento brilhoso.',
+    destaque: null,
+    tamanhos: [
+      { label: '8×8 cm — 40 unid.',  preco: 20 },
+      { label: '8×8 cm — 60 unid.',  preco: 30 },
+      { label: '8×8 cm — 100 unid.', preco: 50 },
+    ],
+  },
+  {
+    id: 14,
+    nome: 'Adesivo Personalizado — 10×10 cm',
+    categoria: 'adesivos',
+    emoji: '🏷️',
+    descricao: 'Formato quadrado ou redondo, vinil adesivo de alta qualidade, resistente à água e ao sol. Impressão colorida com acabamento brilhoso.',
+    destaque: 'Mais pedido',
+    tamanhos: [
+      { label: '10×10 cm — 40 unid.',  preco: 30 },
+      { label: '10×10 cm — 60 unid.',  preco: 45 },
+      { label: '10×10 cm — 100 unid.', preco: 75 },
     ],
   },
   {
