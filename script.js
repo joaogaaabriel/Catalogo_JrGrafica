@@ -9,15 +9,16 @@
 const WHATSAPP_NUMBER = '5500000000000'; // Altere para o número real
 
 const categorias = [
-  { id: 'todos',    nome: 'Todos',         emoji: '🗂️', desc: 'Ver tudo'           },
-  { id: 'banners',  nome: 'Banners',       emoji: '🖼️', desc: 'Impressão grande'   },
-  { id: 'cartoes',  nome: 'Cartões',       emoji: '🪪', desc: 'Visita & ID'        },
-  { id: 'panfletos',nome: 'Panfletos',     emoji: '📄', desc: 'Divulgação'         },
-  { id: 'adesivos', nome: 'Adesivos',      emoji: '🏷️', desc: 'Corte e vinil'     },
-  { id: 'outros',   nome: 'Outros',        emoji: '✨', desc: 'Mais produtos'      },
+  { id: 'todos',      nome: 'Todos',        emoji: '🗂️', desc: 'Ver tudo'          },
+  { id: 'banners',    nome: 'Banners',      emoji: '🖼️', desc: 'Impressão grande'  },
+  { id: 'cartoes',    nome: 'Cartões',      emoji: '🪪',  desc: 'Visita & ID'       },
+  { id: 'panfletos',  nome: 'Panfletos',    emoji: '📄',  desc: 'Divulgação'        },
+  { id: 'adesivos',   nome: 'Adesivos',     emoji: '🏷️', desc: 'Corte e vinil'    },
+  { id: 'outros',     nome: 'Outros',       emoji: '✨',  desc: 'Mais produtos'     },
 ];
 
 const produtos = [
+  // ── BANNERS ─────────────────────────────────────────────────────────────
   {
     id: 1,
     nome: 'Banner Pequeno',
@@ -26,7 +27,7 @@ const produtos = [
     descricao: 'Ideal para eventos, promoções e divulgação interna. Impressão de alta resolução em lona 440g com acabamento reforçado.',
     destaque: 'Mais vendido',
     tamanhos: [
-      { label: '43×61 cm', preco: 25 },
+      { label: '43×61 cm',  preco: 25 },
     ],
   },
   {
@@ -42,84 +43,115 @@ const produtos = [
       { label: '1×2 m',     preco: 90 },
     ],
   },
+
+  // ── CARTÕES DE VISITA ────────────────────────────────────────────────────
   {
     id: 3,
-    nome: 'Cartão de Visita',
+    nome: 'Cartão Simples',
     categoria: 'cartoes',
     emoji: '🪪',
-    descricao: 'Cartão profissional em papel supremo 300g, acabamento fosco ou brilhante, com impressão frente e verso.',
-    destaque: 'Promoção',
+    descricao: 'Frente colorida + verso preto e branco com verniz. Tamanho padrão 9×5 cm. 1000 unidades.',
+    destaque: null,
     tamanhos: [
-      { label: '100 unid.',  preco: 20 },
-      { label: '250 unid.',  preco: 40 },
-      { label: '500 unid.',  preco: 60 },
-      { label: '1000 unid.', preco: 95 },
+      { label: '1000 unid. — 9×5 cm', preco: 130 },
     ],
   },
   {
     id: 4,
-    nome: 'Panfleto A5',
-    categoria: 'panfletos',
-    emoji: '📄',
-    descricao: 'Panfleto no formato A5 (15×21 cm), papel couchê 115g, impressão em 4 cores, frente e verso.',
-    destaque: null,
+    nome: 'Cartão 4×4 Colorido',
+    categoria: 'cartoes',
+    emoji: '🪪',
+    descricao: 'Frente e verso coloridos + verniz na frente. Acabamento premium, tamanho 9×5 cm. 1000 unidades.',
+    destaque: 'Mais vendido',
     tamanhos: [
-      { label: '100 unid.',  preco: 30  },
-      { label: '500 unid.',  preco: 80  },
-      { label: '1000 unid.', preco: 120 },
-      { label: '5000 unid.', preco: 380 },
+      { label: '1000 unid. — 9×5 cm', preco: 170 },
     ],
   },
   {
     id: 5,
-    nome: 'Panfleto A4',
-    categoria: 'panfletos',
-    emoji: '📋',
-    descricao: 'Formato A4 (21×29,7 cm), papel couchê 115g. Ideal para cardápios, listas de preços e programas.',
-    destaque: null,
+    nome: 'Cartão BOPP',
+    categoria: 'cartoes',
+    emoji: '🪪',
+    descricao: 'Frente e verso coloridos + verniz localizado + plastificação fosca. Acabamento sofisticado, 9×5 cm. 1000 unidades.',
+    destaque: 'Premium',
     tamanhos: [
-      { label: '100 unid.',  preco: 50  },
-      { label: '500 unid.',  preco: 140 },
-      { label: '1000 unid.', preco: 220 },
+      { label: '1000 unid. — 9×5 cm', preco: 220 },
     ],
   },
+
+  // ── PANFLETOS 4/0 (Colorido Frente) ─────────────────────────────────────
   {
     id: 6,
-    nome: 'Adesivo Pequeno',
+    nome: 'Panfleto 4/0 — Colorido Frente',
+    categoria: 'panfletos',
+    emoji: '📄',
+    descricao: 'Impressão colorida somente na frente (4/0). Papel couchê, alta qualidade gráfica. 5000 unidades.',
+    destaque: null,
+    tamanhos: [
+      { label: '10×15 cm — 5000 unid.', preco: 320 },
+      { label: '15×15 cm — 5000 unid.', preco: 420 },
+      { label: '15×20 cm — 5000 unid.', preco: 495 },
+    ],
+  },
+
+  // ── PANFLETOS 4/1 (Frente Colorido + Verso P&B) ──────────────────────────
+  {
+    id: 7,
+    nome: 'Panfleto 4/1 — Frente Color + Verso P&B',
+    categoria: 'panfletos',
+    emoji: '📋',
+    descricao: 'Frente colorida + verso em preto e branco (4/1). Ótimo custo-benefício para divulgação completa. 5000 unidades.',
+    destaque: null,
+    tamanhos: [
+      { label: '10×15 cm — 5000 unid.', preco: 350 },
+      { label: '15×20 cm — 5000 unid.', preco: 570 },
+    ],
+  },
+
+  // ── PANFLETOS 4/4 (Frente e Verso Colorido) ─────────────────────────────
+  {
+    id: 8,
+    nome: 'Panfleto 4/4 — Frente e Verso Colorido',
+    categoria: 'panfletos',
+    emoji: '🗞️',
+    descricao: 'Frente e verso totalmente coloridos (4/4). Máximo impacto visual, ideal para cardápios e promoções. 5000 unidades.',
+    destaque: 'Destaque',
+    tamanhos: [
+      { label: '10×15 cm — 5000 unid.', preco: 395 },
+      { label: '15×20 cm — 5000 unid.', preco: 620 },
+    ],
+  },
+
+  // ── ADESIVOS ─────────────────────────────────────────────────────────────
+  {
+    id: 9,
+    nome: 'Adesivo Vinil',
     categoria: 'adesivos',
     emoji: '🏷️',
     descricao: 'Adesivo vinil com impressão colorida, resistente à água e ao sol. Acabamento brilhoso ou laminado fosco.',
     destaque: null,
     tamanhos: [
-      { label: 'Pequeno (até 10cm)', preco: 10 },
+      { label: 'Pequeno (até 10 cm)',  preco: 10 },
+      { label: 'Médio (11–25 cm)',     preco: 25 },
+      { label: 'Grande (26–50 cm)',    preco: 45 },
     ],
   },
   {
-    id: 7,
-    nome: 'Adesivo Médio',
-    categoria: 'adesivos',
-    emoji: '🏷️',
-    descricao: 'Ideal para lojas, carros e embalagens. Alta durabilidade, impressão fotográfica com corte personalizado.',
-    destaque: null,
-    tamanhos: [
-      { label: 'Médio (11–25cm)', preco: 25 },
-      { label: 'Grande (26–50cm)', preco: 45 },
-    ],
-  },
-  {
-    id: 8,
+    id: 10,
     nome: 'Etiqueta Personalizada',
     categoria: 'adesivos',
     emoji: '🔖',
     descricao: 'Etiquetas em bobina ou folha. Ideais para produtos, embalagens e identificações. Acabamento profissional.',
-    destaque: 'Novo',
+    destaque: null,
     tamanhos: [
       { label: '500 unid.',  preco: 35 },
       { label: '1000 unid.', preco: 60 },
     ],
   },
+
+  // ── OUTROS ───────────────────────────────────────────────────────────────
   {
-    id: 9,
+    id: 11,
     nome: 'Folder A4 Dobrado',
     categoria: 'outros',
     emoji: '📁',
@@ -132,7 +164,7 @@ const produtos = [
     ],
   },
   {
-    id: 10,
+    id: 12,
     nome: 'Calendário Personalizado',
     categoria: 'outros',
     emoji: '📅',
